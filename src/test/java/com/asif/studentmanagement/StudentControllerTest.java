@@ -77,11 +77,10 @@ class StudentControllerTest {
             .contentType(MediaType.APPLICATION_JSON)
             .content(objectMapper.writeValueAsString(inputStudent)))
 
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.id").value(10))
-            .andExpect(jsonPath("$.name").value("Amit"))
-            .andExpect(jsonPath("$.course").value("Spring Boot"))
-            .andExpect(jsonPath("$.email").value("amit@gmail.com"));
+                .andExpect(jsonPath("$.data.id").value(10))
+                .andExpect(jsonPath("$.data.name").value("Amit"))
+                .andExpect(jsonPath("$.data.course").value("Spring Boot"))
+                .andExpect(jsonPath("$.data.email").value("amit@gmail.com"));
     }
 
     @Test

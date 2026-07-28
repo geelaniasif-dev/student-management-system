@@ -18,7 +18,7 @@ public class StudentController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
-public ResponseEntity<ApiResponse<Student>> createStudent(@RequestBody Student student) {
+public ResponseEntity<ApiResponse<Student>> createStudent(@Valid @RequestBody Student student) {
 
     Student savedStudent = service.saveStudent(student);
 
