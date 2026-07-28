@@ -35,18 +35,21 @@ A Spring Boot REST API project for managing student records.
 
 ```bash
 git clone https://github.com/geelaniasif-dev/student-management-system
+
 ```
 
 ### Build
 
 ```bash
 mvn clean install
+
 ```
 
 ### Run
 
 ```bash
 mvn spring-boot:run
+
 ```
 
 ## API Documentation
@@ -55,4 +58,5 @@ Swagger UI:
 
 ```
 http://localhost:8080/swagger-ui/index.html
+
 ```
